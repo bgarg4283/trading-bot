@@ -88,8 +88,8 @@ struct TechnicalIndicators {
 
 struct OptionFlowSignal {
     std::string direction;
-    double      pcr              = 0.0;
-    double      pcrVolume        = 0.0;
+    double      pcr              = 1.0;
+    double      pcrVolume        = 1.0;
     int         maxPainStrike    = 0;
     int         strongSupportStrike = 0;
     int         strongResistStrike  = 0;
@@ -145,7 +145,7 @@ struct BotConfig {
     std::string fyersAppId;
     std::string fyersAccessToken;
     std::string fyersApiBase  = "https://api-t1.fyers.in/api/v3";
-    std::string fyersDataApi  = "https://api-t1.fyers.in/data-rest/v2";
+    std::string fyersDataUrl  = "https://api-t1.fyers.in/data/candles";
     bool tradeNifty           = true;
     bool tradeFinNifty        = true;
     int  niftyLotSize         = 25;
